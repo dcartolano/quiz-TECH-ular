@@ -1,0 +1,9 @@
+{
+  "question": "What is my name?",
+  "answer": [
+    {"text": "Dave", "isCorrect": true},
+    {"text": "Arthur", "isCorrect": false},
+    {"text": "Douglas McKinley", "isCorrect": false},
+    {"text": "Germaine", "isCorrect": false}
+  ]
+}
