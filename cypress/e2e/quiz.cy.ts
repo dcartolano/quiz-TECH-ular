@@ -1,33 +1,25 @@
-describe('template spec', () => {
+
+describe('Quiz Component', () => {
   beforeEach(() => {
-    cy.visit('/')
-  })
-  it('passes', () => {
-    // when click start button
-    cy.get('button').click()
-    // card should load
-    
-    
-  })
-
-  it('passes', () => {
-    
-    
-  })
-
-  it('passes', () => {
-    
-    
-  })
-})
-
-// 3 tests minimum
-// test quiz starts when button is clicked
-// click start button
-// does card load .card
-
-
-// test completes once all questions answered
-
-
-// click on restart button, should restart
+    cy.visit('/');
+  });
+  it('should show the first question if start quiz button is clicked', () => {
+    cy.get('button').contains('Start Quiz').click();
+    cy.get('.card').should('be.visible');
+  });
+  it('should show questions until all are answered', () => {
+    cy.get('button').contains('Start Quiz').click();
+    for (let i = 0; i < 10; i++) {
+      cy.get('button').contains('1').click();
+    }
+    cy.get('.alert-success').should('be.visible').and('contain', 'Your score:');
+  });
+  it('should restart quiz if restart button is clicked', () => {
+    cy.get('button').contains('Start Quiz').click();
+    for (let i = 0; i < 10; i++) {
+      cy.get('button').contains('1').click();
+    }
+    cy.get('button').contains('Take New Quiz').click();
+    cy.get('.card').should('be.visible');
+  });
+});
