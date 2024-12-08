@@ -19,9 +19,11 @@ Copy the SSH Key from the [GitHub Repository](https://github.com/dcartolano/quiz
 
 ## Usage
 
+[Click here](https://drive.google.com/file/d/1V9F47dJ1EEFUeH0bMu2i4OCy8IGFTQwL/view) to view a walkthrough video of the testing operation for the app.
+
 To run the app locally and view in a browser, run the command `npm run start:dev`. 
 
-To run the tests, you must already have the server running by using the command above. Without closing out your terminal where the server is running, open a new terminal tab/window and run the command `npm run test`, which will cause both the component and end-to-end tests to run. The terminal output will tell you the results of these tests, and whether program operation passes or not.
+To run the tests, you must already have the server actively running by using the command above. Without closing out your terminal where the server is running, open a new terminal tab/window and run the command `npm run test`, which will cause both the component and end-to-end tests to run. The terminal output will tell you the results of these tests, and whether program operation passes or not.
 
 ## Credits
 
